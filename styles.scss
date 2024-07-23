@@ -1,0 +1,109 @@
+$universal-font: "Merriweather", serif;
+$primary-color: rgba(9, 220, 65, 0.758);
+$secondary-color: rgb(129, 128, 131);
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  font-family: $universal-font;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+
+    .sidebar {
+      width: 20%;
+      height: 100%;
+      background-color: $primary-color;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 15px 0px 40px 5px rgba(0, 0, 0, 0.75);
+
+      h2 {
+        font-size: 48px;
+        color: $secondary-color;
+        text-decoration: underline;
+        margin-bottom: 10px;
+      }
+
+      .user-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        color: $secondary-color;
+
+        li {
+          margin-bottom: 5px;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .main-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .text {
+        font-size: 32px;
+        color: $secondary-color;
+        margin-bottom: 20px;
+      }
+
+      .randomizer-button {
+        padding: 10px 20px;
+        font-family: $universal-font;
+        font-size: 32px;
+        background-color: $primary-color;
+        color: $secondary-color;
+        border: 2px solid $secondary-color;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.75);
+
+        &:hover {
+          background-color: #219653;
+        }
+      }
+
+      .winner {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 20px;
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  body {
+    .container {
+      .sidebar {
+        h2 {
+          font-size: 4vw;
+          .user-list {
+            .user-item {
+              font-size: 18px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
